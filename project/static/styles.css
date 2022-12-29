@@ -1,0 +1,74 @@
+#homeButton {
+    font-size: 25px;
+}
+
+#loginButton, #registerButton, #submitButton, #createPersonalTrainning {
+    background-color: #343635;
+    border-color: #343635;
+    margin: 10px;
+}
+
+#username, #password, #confirmPass {
+    border-color: darkgray;
+}
+
+#trainningType {
+    margin-top: 5px;
+}
+
+#customTableHeader {
+    border-bottom: 1px solid;
+}
+
+#customTable{
+    font-size: 20px;
+    margin: auto;
+    margin-top: 2%;
+    width: 80%;
+}
+
+#indexTableHeader {
+    font-size: 20px;
+}
+
+#indexTable {
+    margin: auto;
+    margin-top: 2%;
+    width: 70%;
+}
+
+select {
+    margin: 10px;
+}
+
+label {
+    margin-top: 5px;
+}
+
+.exercisesTableRow{
+    margin: auto;
+    width: 75%;
+}
+
+.exercisesTableHeader {
+}
+
+.setsInput, .repsInput{
+    width: 28%;
+}
+
+.selectExercise{
+    width: 75%;
+    text-align: center;
+}
+
+.btn{
+    padding: auto;
+}
+
+.tableData {
+    height: 25%;
+    width: auto;
+    text-align: center;
+    vertical-align: middle;
+}

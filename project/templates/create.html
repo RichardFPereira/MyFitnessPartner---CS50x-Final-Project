@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<h1> Create Your Workout</h1>
+<div>
+    <label for="gender">Are you Male or Female?</label>
+    <div id="gender">
+        <select class="form-select mx-auto w-auto" name="symbol" required>
+            <option value="" disabled selected style="color: darkgray">Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+    </div>
+        <label for="trainningLevel">Choose your trainning level</label>
+    </div>
+    <div id="trainningLevel">
+        <select class="form-select mx-auto w-auto" name="symbol" required>
+            <option value="" disabled selected style="color: darkgray">Level</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+        </select>
+    </div>
+    <div>
+        <label for="frequency">How many times per week will you workout?</label>
+    </div>
+    <div id="frequency">
+        <select class="form-select mx-auto w-auto" name="symbol" required>
+            <option value="" disabled selected style="color: darkgray">Frequency</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+        </select>
+    </div>
+    <div>
+        <label for="goal">Fitness goal</label>
+    </div>
+    <div id="goal">
+        <select class="form-select mx-auto w-auto" name="symbol" required>
+            <option value="" disabled selected style="color: darkgray">Goal</option>
+            <option>Lose weight</option>
+            <option>Hypertrophy</option>
+            <option>Physical fitness</option>
+        </select>
+    </div>
+    <button id="submitButton" class="btn btn-primary" type="submit" id="loginButton">Submit</button>
+</div>
+
+{% endblock %}

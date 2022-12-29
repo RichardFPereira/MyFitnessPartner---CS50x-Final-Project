@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+{% if (hasTrain == False) %}
+<h2>Hello, {{username}}! Seems like it's your first time here.</h2><br>
+<h4>Create your first workout!</h4><br>
+<a id="firstTrain" class="btn btn-dark" type="button" href="/custom">Create!</a>
+{% endif %}
+{% if (hasTrain == True) %}
+    {% if exercises == "rest"%}
+    <h3>{{weekDay}} is your REST day!</h3>
+    {% else %}
+    <h3>{{weekDay}}'s Trainning</h3><br>
+    <h6>*Obs.: For muscle gain people used to do 3 to 4 sets with 8 to 12 reps each, but always consult a professional to create the best workout for you.</h6><br>
+
+    <div class="d-flex justify-content-center">
+        {% for muscle in exercises %}
+            {% if muscle != "cardio" %}
+            <table class="table table-bordered" style="width: auto">
+                <thead>
+                    <tr>
+                        <td><b>{{muscle | upper}}</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in range(4) %}
+                    <tr>
+                        {% if ((exercises[muscle] | length) < 5) %}
+                            {% if ((exercises[muscle] | length) >= loop.index) %}
+                            <td class="tableData">
+                                <label>Exercise:</label><br>
+                                <b id="{{exercises[muscle][i]}}"><input type="checkbox"
+                                    id="{{exercises[muscle][i]}}" onclick="checkTrainning(this.id)">
+                                    {{exercises[muscle][i]}}</b>
+                            </td>
+                            {% endif %}
+                        {% else %}
+                            {% if loop.index == 1%}
+                            <td class="tableData">
+                                <label>Exercise:</label><br>
+                                <b id="{{exercises[muscle][i]}}"><input type="checkbox"
+                                    id="{{exercises[muscle][i]}}" onclick="checkTrainning(this.id)">  {{exercises[muscle]}}</b>
+                            </td>
+                            {% endif %}
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% endif %}
+            {% if muscle == "cardio" %}
+            <table class="table table-bordered" style="width: auto">
+                <thead>
+                    <tr>
+                        <td><b>{{muscle | upper}}</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in range(exercises[muscle] | length) %}
+                    <tr>
+                        {% if ((exercises[muscle] | length) < 5) %}
+                            {% if ((exercises[muscle] | length) >= loop.index) %}
+                                <td class="tableData">
+                                    <label>Exercise:</label><br>
+                                    <b id="{{exercises[muscle][i]}}"><input type="checkbox"
+                                        id="{{exercises[muscle][i]}}" onclick="checkTrainning(this.id)">  {{exercises[muscle][i] | upper}}</b>
+                                </td>
+                                {% endif %}
+                        {% else %}
+                            {% if loop.index == 1%}
+                            <td class="tableData">
+                                <label>Exercise:</label><br>
+                                <b id="{{exercises[muscle][i]}}"><input type="checkbox"
+                                    id="{{exercises[muscle][i]}}" onclick="checkTrainning(this.id)">  {{exercises[muscle] | upper}}</b>
+                            </td>
+                            {% endif %}
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+{% endif %}
+{% endblock %}

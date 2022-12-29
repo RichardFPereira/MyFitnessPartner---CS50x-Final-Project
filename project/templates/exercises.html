@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<h3>SELECT THE MUSCLE</h3>
+<form action="/exercises" method="post">
+    <table class="exercisesTableRow">
+        {% for i in range(11) %}
+        {% if (muscle[i] != "Rest")%}
+        {% if (muscle[i] != "None") %}
+        <tr id="{{muscle[i]}}" style="visibility: hidden">
+            <th>
+                <button type="button" class="btn btn-dark" id="{{muscle[i]}}Button" onclick="hideShowExercises(this.id)" style="visibility: visible; padding: 10px;">{{ muscle[i] }}</button>
+            </th>
+            {% if muscle[i] == "Cardio" %}
+            <td class="exercisesData">
+                <label for="Cardio1"><b>Cardio Exercise:</b></label><br>
+                <input autocomplete="off" id="Cardio1" name="Cardio1" placeholder="Cardio"></a>
+                <br>
+            </td>
+            <td class="exercisesData">
+                <label for="Cardio2"><b>Cardio Exercise:</b></label><br>
+                <input autocomplete="off" id="Cardio2" name="Cardio2" placeholder="Cardio"></a>
+                <br>
+            </td>
+            <td class="exercisesData">
+                <label for="Cardio3"><b>Cardio Exercise:</b></label><br>
+                <input autocomplete="off" id="Cardio3" name="Cardio3" placeholder="Cardio"></a>
+                <br>
+            </td>
+            <td class="exercisesData">
+                <label for="Cardio4"><b>Cardio Exercise:</b></label><br>
+                <input autocomplete="off" id="Cardio4" name="Cardio4" placeholder="Cardio"></a>
+                <br>
+            </td>
+            {% endif %}
+            {% if muscle[i] != "Cardio" %}
+            <td class="exercisesData">
+                <label for="{{muscle[i]}}1"><b>Exercise:</b></label><br>
+                <select class="form-select mx-auto w-auto" id="{{muscle[i]}}1" name="{{muscle[i]}}1" required>
+                    {% if muscle[i] == "Biceps" %}
+                    <option>NONE</option>
+                        {% for bicep in biceps %}
+                        <option>{{bicep.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Back" %}
+                    <option>NONE</option>
+                        {% for back in backs %}
+                        <option>{{back.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Calves" %}
+                    <option>NONE</option>
+                        {% for calve in calves %}
+                        <option>{{calve.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Chest" %}
+                    <option>NONE</option>
+                        {% for chest in chests %}
+                        <option>{{chest.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Core" %}
+                    <option>NONE</option>
+                        {% for core in cores %}
+                        <option>{{core.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Legs" %}
+                    <option>NONE</option>
+                        {% for leg in legs %}
+                        <option>{{leg.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Trapezius" %}
+                    <option>NONE</option>
+                        {% for trapeziu in trapezius %}
+                        <option>{{trapeziu.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Triceps" %}
+                    <option>NONE</option>
+                        {% for tricep in triceps %}
+                        <option>{{tricep.exercise}}</option>
+                        {% endfor %}
+                    {% endif %}
+                    </select>
+            </td>
+            <td class="exercisesData">
+                <label for="{{muscle[i]}}2"><b>Exercise:</b></label><br>
+                <select class="form-select mx-auto w-auto" id="{{muscle[i]}}2" name="{{muscle[i]}}2" required>
+                {% if muscle[i] == "Biceps" %}
+                    <option>NONE</option>
+                        {% for bicep in biceps %}
+                        <option>{{bicep.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Back" %}
+                    <option>NONE</option>
+                        {% for back in backs %}
+                        <option>{{back.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Calves" %}
+                    <option>NONE</option>
+                        {% for calve in calves %}
+                        <option>{{calve.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Chest" %}
+                    <option>NONE</option>
+                        {% for chest in chests %}
+                        <option>{{chest.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Core" %}
+                    <option>NONE</option>
+                        {% for core in cores %}
+                        <option>{{core.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Legs" %}
+                    <option>NONE</option>
+                        {% for leg in legs %}
+                        <option>{{leg.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Trapezius" %}
+                    <option>NONE</option>
+                        {% for trapeziu in trapezius %}
+                        <option>{{trapeziu.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Triceps" %}
+                    <option>NONE</option>
+                        {% for tricep in triceps %}
+                        <option>{{tricep.exercise}}</option>
+                        {% endfor %}
+                    {% endif %}
+                    </select>
+            </td>
+            <td class="exercisesData">
+                <label for="{{muscle[i]}}3"><b>Exercise:</b></label><br>
+                <select class="form-select mx-auto w-auto" id="{{muscle[i]}}3" name="{{muscle[i]}}3" required>
+                    {% if muscle[i] == "Biceps" %}
+                    <option>NONE</option>
+                        {% for bicep in biceps %}
+                        <option>{{bicep.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Back" %}
+                    <option>NONE</option>
+                        {% for back in backs %}
+                        <option>{{back.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Calves" %}
+                    <option>NONE</option>
+                        {% for calve in calves %}
+                        <option>{{calve.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Chest" %}
+                    <option>NONE</option>
+                        {% for chest in chests %}
+                        <option>{{chest.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Core" %}
+                    <option>NONE</option>
+                        {% for core in cores %}
+                        <option>{{core.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Legs" %}
+                    <option>NONE</option>
+                        {% for leg in legs %}
+                        <option>{{leg.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Trapezius" %}
+                    <option>NONE</option>
+                        {% for trapeziu in trapezius %}
+                        <option>{{trapeziu.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Triceps" %}
+                    <option>NONE</option>
+                        {% for tricep in triceps %}
+                        <option>{{tricep.exercise}}</option>
+                        {% endfor %}
+                    {% endif %}
+                    </select>
+            </td>
+            <td class="exercisesData">
+                <label for="{{muscle[i]}}4"><b>Exercise:</b></label><br>
+                <select class="form-select mx-auto w-auto" id="{{muscle[i]}}4" name="{{muscle[i]}}4" required value="SELECT">
+                    {% if muscle[i] == "Biceps" %}
+                    <option>NONE</option>
+                        {% for bicep in biceps %}
+                        <option>{{bicep.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Back" %}
+                    <option>NONE</option>
+                        {% for back in backs %}
+                        <option>{{back.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Calves" %}
+                    <option>NONE</option>
+                        {% for calve in calves %}
+                        <option>{{calve.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Chest" %}
+                    <option>NONE</option>
+                        {% for chest in chests %}
+                        <option>{{chest.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Core" %}
+                    <option>NONE</option>
+                        {% for core in cores %}
+                        <option>{{core.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Legs" %}
+                    <option>NONE</option>
+                        {% for leg in legs %}
+                        <option>{{leg.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Trapezius" %}
+                    <option>NONE</option>
+                        {% for trapeziu in trapezius %}
+                        <option>{{trapeziu.exercise}}</option>
+                        {% endfor %}
+                    {% elif muscle[i] == "Triceps" %}
+                    <option>NONE</option>
+                        {% for tricep in triceps %}
+                        <option>{{tricep.exercise}}</option>
+                        {% endfor %}
+                    {% endif %}
+                    </select>
+            </td>
+            {% endif %}
+        </tr>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </table>
+        <button type="submit" class="btn btn-dark">CREATE!</button>
+</form>
+{% endblock %}

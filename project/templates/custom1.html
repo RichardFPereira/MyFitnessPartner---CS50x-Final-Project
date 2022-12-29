@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Custom2
+{% endblock %}
+
+{% block main %}
+<div class="mb-3" style="margin: 50px">
+    <h1>Create your own workout.</h1>
+    <p>This is not a workout recommendation. Feel free to change the schadule and always cunsult a professional.</p>
+    <table id="customTable" name="customTable">
+        <thead id="customTableFirstRow" name="customTableFirstRow">
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </thead>
+        <tbody>
+            {% for i in range(4) %}
+            <tr id="firstRow">
+                <td>
+                    <div>
+                        {% if i == 0 %}
+                        <label for="monday1">Workout: </label>
+                        {% endif %}
+                        <br>
+                        <select class="form-select mx-auto w-auto" id="monday1" name="monday1" required>
+                            {% for i in range(11) %}
+                            <option>{{ muscle[i] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        {% if i == 0 %}
+                        <label for="tuesday1">Workout: </label>
+                        {% endif %}
+                        <br>
+                        <select class="form-select mx-auto w-auto" id="tuesday1" name="tuesday1" required>
+                            {% for i in range(11) %}
+                            <option>{{ muscle[i] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        {% if i == 0 %}
+                        <label for="wednesday1">Workout: </label>
+                        {% endif %}
+                        <br>
+                        <select class="form-select mx-auto w-auto" id="wednesday1" name="wednesday1" required>
+                            {% for i in range(11) %}
+                            <option>{{ muscle[i] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        {% if i == 0 %}
+                        <label for="thursday1">Workout: </label>
+                        {% endif %}
+                        <br>
+                        <select class="form-select mx-auto w-auto" id="thursday1" name="thursday1" required>
+                            {% for i in range(11) %}
+                            <option>{{ muscle[i] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        {% if i == 0 %}
+                        <label for="friday1">Workout: </label>
+                        {% endif %}
+                        <br>
+                        <select class="form-select mx-auto w-auto" id="friday1" name="friday1" required>
+                            {% for i in range(11) %}
+                            <option>{{ muscle[i] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        {% if i == 0 %}
+                        <label for="saturday1">Workout: </label>
+                        {% endif %}
+                        <br>
+                        <select class="form-select mx-auto w-auto" id="saturday1" name="saturday1" required>
+                            {% for i in range(11) %}
+                            <option>{{ muscle[i] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        {% if i == 0 %}
+                        <label for="sunday">Workout: </label>
+                        {% endif %}
+                        <br>
+                        <select class="form-select mx-auto w-auto" id="sunday" name="sunday" required>
+                            {% for i in range(11) %}
+                            <option>{{ muscle[i] }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

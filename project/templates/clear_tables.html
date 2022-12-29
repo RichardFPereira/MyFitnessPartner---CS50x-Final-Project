@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<form action="/clear_tables" method="post">
+  <div class="btn-group" role="group" aria-label="Basic outlined example">
+      <button type="sumit" class="btn btn-outline-primary" name="clearUserTable" value="user">
+        Clear User Table</button>
+      <button type="sumit" class="btn btn-outline-primary" name="clearWeekSchedule" value="week">Clear Week_Schedule Table</button>
+      <button type="sumit" class="btn btn-outline-primary" name="clearWorkoutTable" value="workout">Clear Workout Table</button>
+  </div>
+</form>
+{% endblock %}

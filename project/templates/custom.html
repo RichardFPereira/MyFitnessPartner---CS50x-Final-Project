@@ -1,0 +1,531 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<form action="/custom" method="post">
+    <div class="mb-3" style="margin: 50px" action="/custom" method="post">
+        <h1>Create your own workout.</h1>
+        <p>This is not a workout recommendation. Feel free to change the schadule and always consult a professional.</p>
+        <table id="customTable" name="customTable">
+            <thead id="customTableHeader" name="customTableHeader">
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </thead>
+            <tbody>
+                <tr id="firstRow">
+                    <td>
+                        <div>
+                            <label for="monday1">Workout: </label><br>
+                            <select class="form-select mx-auto w-auto" id="monday1" name="monday1" required>
+                                <option>Biceps</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Back</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                                <option>Rest</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <label for="tuesday1">Workout: </label><br>
+                            <select class="form-select mx-auto w-auto" id="tuesday1" name="tuesday1" required>
+                                <option>Cardio</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Back</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Biceps</option>
+                                <option>Rest</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <label for="wednesday1">Workout: </label><br>
+                            <select class="form-select mx-auto w-auto" id="wednesday1" name="wednesday1" required>
+                                <option>Chest</option>
+                                <option>Triceps</option>
+                                <option>Cardio</option>
+                                <option>Back</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Biceps</option>
+                                <option>Rest</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <label for="thursday1">Workout: </label><br>
+                            <select class="form-select mx-auto w-auto" id="thursday1" name="thursday1" required>
+                                <option>Cardio</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Back</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Biceps</option>
+                                <option>Rest</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <label for="friday1">Workout: </label><br>
+                            <select class="form-select mx-auto w-auto" id="friday1" name="friday1" required>
+                                <option>Legs</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Back</option>
+                                <option>Core</option>
+                                <option>Cardio</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Biceps</option>
+                                <option>Rest</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <label for="saturday1">Workout: </label><br>
+                            <select class="form-select mx-auto w-auto" id="saturday1" name="saturday1" required>
+                                <option>Rest</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Back</option>
+                                <option>Core</option>
+                                <option>Cardio</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Biceps</option>
+                                <option>Legs</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <label for="sunday">Workout: </label><br>
+                            <select class="form-select mx-auto w-auto" id="sunday1" name="sunday1" required>
+                                <option>Rest</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Back</option>
+                                <option>Core</option>
+                                <option>Cardio</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Biceps</option>
+                                <option>Legs</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="secondRow">
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="monday2" name="monday2" required>
+                                <option>Back</option>
+                                <option>Biceps</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="tuesday2" name="tuesday2" required>
+                                <option>None</option>
+                                <option>Back</option>
+                                <option>Biceps</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="wednesday2" name="wednesday2" required>
+                                <option>Triceps</option>
+                                <option>Biceps</option>
+                                <option>Back</option>
+                                <option>Chest</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="thursday2" name="thursday2" required>
+                                <option>None</option>
+                                <option>Back</option>
+                                <option>Biceps</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="friday2" name="friday2" required>
+                                <option>Calves</option>
+                                <option>Biceps</option>
+                                <option>Back</option>
+                                <option>Chest</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Triceps</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="saturday2" name="saturday2" required>
+                                <option>None</option>
+                                <option>Back</option>
+                                <option>Biceps</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="sunday2" name="sunday2" required>
+                                <option>None</option>
+                                <option>Back</option>
+                                <option>Biceps</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="thirdRow">
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="monday3" name="monday3" required>
+                                <option>Trapezius</option>
+                                <option>Biceps</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Back</option>
+                                <option>Cardio</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="tuesday3" name="tuesday3" required>
+                                <option>None</option>
+                                <option>Back</option>
+                                <option>Biceps</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="wednesday3" name="wednesday3" required>
+                                <option>Shoulders</option>
+                                <option>Biceps</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Trapezius</option>
+                                <option>Back</option>
+                                <option>Cardio</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="thursday3" name="thursday3" required>
+                                <option>None</option>
+                                <option>Back</option>
+                                <option>Biceps</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="friday3" name="friday3" required>
+                                <option>Core</option>
+                                <option>Biceps</option>
+                                <option>Back</option>
+                                <option>Chest</option>
+                                <option>Calves</option>
+                                <option>Legs</option>
+                                <option>Triceps</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                                <option>None</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="saturday3" name="saturday3" required>
+                                <option>None</option>
+                                <option>Back</option>
+                                <option>Biceps</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="sunday3" name="sunday3" required>
+                                <option>None</option>
+                                <option>Back</option>
+                                <option>Biceps</option>
+                                <option>Triceps</option>
+                                <option>Chest</option>
+                                <option>Core</option>
+                                <option>Legs</option>
+                                <option>Calves</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr id="fourthRow">
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="monday4" name="monday4" required>
+                                <option>None</option>
+                                <option>Core</option>
+                                <option>Biceps</option>
+                                <option>Back</option>
+                                <option>Chest</option>
+                                <option>Calves</option>
+                                <option>Legs</option>
+                                <option>Triceps</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="tuesday4" name="tuesday4" required>
+                                <option>None</option>
+                                <option>Core</option>
+                                <option>Biceps</option>
+                                <option>Back</option>
+                                <option>Chest</option>
+                                <option>Calves</option>
+                                <option>Legs</option>
+                                <option>Triceps</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="wednesday4" name="wednesday4" required>
+                                <option>None</option>
+                                <option>Core</option>
+                                <option>Biceps</option>
+                                <option>Back</option>
+                                <option>Chest</option>
+                                <option>Calves</option>
+                                <option>Legs</option>
+                                <option>Triceps</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="thursday4" name="thursday4" required>
+                                <option>None</option>
+                                <option>Core</option>
+                                <option>Biceps</option>
+                                <option>Back</option>
+                                <option>Chest</option>
+                                <option>Calves</option>
+                                <option>Legs</option>
+                                <option>Triceps</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="friday4" name="friday4" required>
+                                <option>None</option>
+                                <option>Core</option>
+                                <option>Biceps</option>
+                                <option>Back</option>
+                                <option>Chest</option>
+                                <option>Calves</option>
+                                <option>Legs</option>
+                                <option>Triceps</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="saturday4" name="saturday4" required>
+                                <option>None</option>
+                                <option>Core</option>
+                                <option>Biceps</option>
+                                <option>Back</option>
+                                <option>Chest</option>
+                                <option>Calves</option>
+                                <option>Legs</option>
+                                <option>Triceps</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <select class="form-select mx-auto w-auto" id="sunday4" name="sunday4" required>
+                                <option>None</option>
+                                <option>Core</option>
+                                <option>Biceps</option>
+                                <option>Back</option>
+                                <option>Chest</option>
+                                <option>Calves</option>
+                                <option>Legs</option>
+                                <option>Triceps</option>
+                                <option>Shoulders</option>
+                                <option>Trapezius</option>
+                                <option>Cardio</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <button id="createPersonalTrainning" class="btn btn-primary" type="submit" >Create!</button>
+    </div>
+</form>
+{% endblock %}
+<!-- https://wger.de/api/v2/ -->
+<!-- https://wger.de/api/v2/exercisecategory/ -->
+<!-- https://realpython.com/api-integration-in-python/ -->
