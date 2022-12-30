@@ -113,3 +113,44 @@ This is our main code for the data backend and it handles the routs for our page
         - Show the table with days of week and four rows of data for each day of week.
         - Each row has twelve options of choice inside a dropdown menu: "None","Biceps", "Back", "Calves", "Cardio", "Chest", "Core", "Legs", "Rest", "Trapezius", "Triceps", "Shoulders"
         - Each table data has their own id to pass the value to the app.py file to handle data.
+        
+    * error.html:
+        - Import base.html layout.
+        - Display error messages.
+
+    * exercises.html:
+        - Import base.html layout.
+        - Show buttons for each muscle. When clicked, show exercises option to each muscle.
+        - Allows the user to select the exercises and create a training plan for each muscle by clicking on create button.
+
+    * index.html:
+        - Import base.html layout.
+        - If the user doesn't have a training schedule, it shows a welcome message and allow user to creates their first plan.
+        - If the user already have a training schedule, it will receive the actual day of week and will display the muscles and exercises for that day's training.
+
+    * login.html:
+        - Import base.html layout.
+        - Create two text boxes to receive login and password.
+        - The password uses the "password" property of input html tag to hide the text.
+
+    * register.html:
+        - Import base.html layout.
+        - Create three text boxes to receive login, password and confirmation password.
+        - Both password and confirmation password use the "password" property of input html tag to hide the text.
+
+## Databases
+
+    * users.db:
+        - This database save the user_id, username and the user password (hash).
+
+    * week_schedule.db:
+        - id column: unique id for each row.
+        - user_id column: same id used in the users.db table.
+        - monday, tuesday, wednesday, thursday, friday, saturday and sunday columns: save the muscle chosen by the user_id user.
+
+    * exercises.db:
+        - A database of exercises for each muscle disponible in our application.
+
+    * workout.db:
+        - A database of tables for each muscle.
+        - Each table inside this database will receive and id, the user_id and the exercise for that muscle.
