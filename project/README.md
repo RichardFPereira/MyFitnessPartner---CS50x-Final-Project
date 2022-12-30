@@ -1,16 +1,15 @@
-<h1>MY FITNESS PARTNER</h1>
+# MY FITNESS PARTNER
 
-Video Demo:
-<https://www.youtube.com/watch?v=0-JElocpAsk>
+### Video Demo: <https://www.youtube.com/watch?v=0-JElocpAsk>
 
-<h3>Description</h3>
+### Description
 Hello guys! This is my final project for CS50x course.
 I've created a online workout web page where you can login and create your own workout trainning plan.
 
 I've used Python with the Flask framework in the backend and HTML, CSS, JavaScript and Bootstrap in the frontend.
 For the database I've used SQLite to handle user login, password and data about training schedules, muscles and exercises.
 
-<h2>app.py</h2>
+## app.py
 
 This is our main code for the data backend and it handles the routs for our pages.
 
@@ -75,7 +74,7 @@ This is our main code for the data backend and it handles the routs for our page
         - After the list is save inside the workout table (workout.db), the user is redirected to the main page showing the training list for actual day of week.
 
 
-<h2>helpers.py</h2>
+## helpers.py
 
     This file contains four functions to help the main program (app.py) work property.
 
@@ -91,7 +90,7 @@ This is our main code for the data backend and it handles the routs for our page
     * addValue():
         This function receives data from todayExercises to create a object list where each key can have more than one value.
 
-<h2>/static</h2>
+## /static
 
     * styles.css:
         This file have css code to change the style of few html tags and objects.
@@ -101,7 +100,7 @@ This is our main code for the data backend and it handles the routs for our page
 
         - The checkTrainning() function is responsible to change the property of the text when the checkbox is clicked inside the index.html file.
 
-<h2>/templates</h2>
+## /templates
 
     * base.html:
         - This is the layout html tamplate used in all pages of this web app.
